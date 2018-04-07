@@ -1,7 +1,5 @@
 require("dotenv").config();
 
-const os = require('os');
-
 let keys      = require("./keys.js"),
     Twitter   = require("twitter"),
     client    = new Twitter(keys.twitter),
@@ -21,9 +19,9 @@ function myTweets(media){
             console.log(`${tweets[i].created_at}
 ${tweets[i].text}
             `);
-        //END OF: for (var i = 0; i < tweets.length; i++) {
+        
         }
-    //END OF: .then(function (tweets) {
+    
     })
     .catch(function (error) {
         throw error;
